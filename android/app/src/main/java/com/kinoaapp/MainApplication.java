@@ -1,4 +1,4 @@
-package com.kinoaapp;
+package com.KinoApp;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

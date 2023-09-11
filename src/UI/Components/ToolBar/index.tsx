@@ -29,7 +29,6 @@ export const ToolBar: React.FC<IToolbar> = ({ canGoBack, title, searchIsActive }
 
     const handleBackPress = () => {
         NavigateBack()
-        //добавить поиск на текущем скрине
     }
     
 

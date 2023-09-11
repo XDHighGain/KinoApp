@@ -5,7 +5,7 @@ export const Styles = StyleSheet.create({
     container: {
         width: '50%',
         height: null,
-        backgroundColor: Colors.Secondary,
+        backgroundColor: Colors.c1,
         borderRadius: 12,
         elevation: 4,
         alignSelf: 'center',

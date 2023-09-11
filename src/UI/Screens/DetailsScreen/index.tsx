@@ -5,8 +5,9 @@ import { ToolBar } from "../../Components/ToolBar";
 import { ExecuteFetch } from "../../../Network/WebApi";
 import { CinemaCard } from "../../Components/CinemaCard";
 import { GetFilms, GetSerials } from "../../../Network/Requests";
-import { Styles } from "../../Components/ToolBar/styles";
+import { Styles } from "./styles";
 import { ProgressIndicator } from "../../Components/ProgressIndicator";
+import { BottomBarHeight } from "../../Components/BottomNavigationBar/styles";
 
 export const NavigationNameDetailsScreen = 'NavigationNameDetailsScreen';
 
@@ -53,7 +54,8 @@ export const DetailsScreen = (props: any) => {
                     <Image style={{width: '100%', height: Dimensions.get('screen').width*1.5, borderBottomLeftRadius: 12, borderBottomRightRadius: 12}} source={{uri: details.poster.toString()}}></Image>
                     <Text style={Styles.titleText}>{details.name}</Text>
                     <Text style={Styles.subtitleText}>{details.alternativeName}</Text>
-                    <Text>{details.description}</Text>
+                    <Text style={Styles.description}>{details.description}</Text>
+                    <View style={{height: BottomBarHeight}}></View>
                 </ScrollView>
             </View>
         </View>

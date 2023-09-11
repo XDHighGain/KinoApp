@@ -1,17 +1,22 @@
 import {StyleSheet} from "react-native";
 import { Colors } from "../../../Resources/Colors";
+export const ToolBarHeight = 50;
 
 export const Styles = StyleSheet.create({
     barContainer: {
         width :'100%',
         backgroundColor: Colors.Secondary,
-        height: 60,
+        height: ToolBarHeight,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignContent: 'center',
-        elevation: 10
+        elevation: 10,
+        opacity: 0.95,
         //borderBottomRightRadius: 12,
-        //borderBottomLeftRadius: 12
+        //borderBottomLeftRadius: 12,
+        position: 'absolute',
+        top: 0,
+        zIndex: 2
     },
     leftContentContainer: {
         height: '100%',
@@ -66,5 +71,5 @@ export const Styles = StyleSheet.create({
         fontWeight: '400',
         color: Colors.Primary,
         marginHorizontal: 12
-    }
+    },
 })

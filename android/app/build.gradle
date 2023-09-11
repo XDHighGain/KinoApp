@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.kinoaapp"
+    namespace "com.KinoApp"
     defaultConfig {
-        applicationId "com.kinoaapp"
+        applicationId "com.KinoApp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
