@@ -14,8 +14,6 @@ export const Styles = StyleSheet.create({
         borderTopRightRadius: 12,
         borderTopLeftRadius: 12,
         opacity: 0.95,
-        //borderBottomRightRadius: 12,
-        //borderBottomLeftRadius: 12,
         position: 'absolute',
         bottom: 0,
         zIndex: 2

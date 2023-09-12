@@ -57,13 +57,13 @@ export const MainScreen = () => {
         }
         fetchFilms().then(
             (res: any[]) => {
-                console.log('123', res)
                 let arr: TFilmModel[] = [];
+                console.log(res)
                 res.forEach(item => {
                     arr.push({
                         alternativeName: item.alternativeName,
                         countries: item.countries,
-                        description: item.shortDescription,
+                        description: item.description,
                         genres: item.genres,
                         id: item.id,
                         movieLength: item.movieLength,
@@ -82,7 +82,6 @@ export const MainScreen = () => {
         )
         fetchSerials().then(
             (res: any[]) => {
-                console.log('123', res)
                 let arr: TFilmModel[] = [];
                 res.forEach(item => {
                     arr.push({

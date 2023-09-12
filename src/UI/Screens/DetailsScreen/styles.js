@@ -64,15 +64,36 @@ export const Styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: '500',
         color: Colors.Primary,
-        marginHorizontal: 12
+        marginHorizontal: 12,
+        alignSelf: 'center'
     },
     subtitleText: {
         fontSize: 16,
         fontWeight: '400',
         color: Colors.Primary,
-        marginHorizontal: 12
+        marginHorizontal: 12,
+        alignSelf: 'center'
     },
     description: {
-        marginHorizontal: 12
+        marginHorizontal: 12,   
+    },
+    ratingsContainer: {
+        width: '100%',
+        marginHorizontal: 12,
+        marginVertical: 12,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    ratingItem: {
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    ratingTitle: {
+        fontSize: 16,
+        fontWeight: '600'
+    },
+    ratingValue: {
+        fontSize: 14,
+        fontWeight: '400'
     }
 })

@@ -12,8 +12,6 @@ export const Styles = StyleSheet.create({
         alignContent: 'center',
         elevation: 10,
         opacity: 0.95,
-        //borderBottomRightRadius: 12,
-        //borderBottomLeftRadius: 12,
         position: 'absolute',
         top: 0,
         zIndex: 2
@@ -23,11 +21,9 @@ export const Styles = StyleSheet.create({
         width: 50,
         alignItems: 'center',
         justifyContent: 'center'
-        //backgroundColor: 'grey'
     },
     middleContentContainer: {
         flex: 1,
-        //backgroundColor: 'red',
         justifyContent: 'center'
     },
     rightContentContainer: {
@@ -35,7 +31,6 @@ export const Styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center'
-        //backgroundColor: 'blue'
     },
     titleStyle: {
         fontSize: 24,
@@ -53,23 +48,5 @@ export const Styles = StyleSheet.create({
         height: 20,
         resizeMode: 'contain',
         tintColor: Colors.Content, 
-    },
-    listTitle: {
-        fontSize: 24,
-        fontWeight: '400',
-        color: Colors.Primary,
-        margin: 12
-    },
-    titleText: {
-        fontSize: 28,
-        fontWeight: '500',
-        color: Colors.Primary,
-        marginHorizontal: 12
-    },
-    subtitleText: {
-        fontSize: 16,
-        fontWeight: '400',
-        color: Colors.Primary,
-        marginHorizontal: 12
-    },
+    }
 })
