@@ -11,12 +11,12 @@ interface NavigateArgs {
 
 export const Navigate = ({ name, params }: NavigateArgs) => {
   if (navigationRef?.current)
-  navigationRef?.current.dispatch(
-    CommonActions.navigate({
-      name: name,
-      params: params
-    })
-)
+    navigationRef?.current.dispatch(
+      CommonActions.navigate({
+        name: name,
+        params: params
+      })
+    )
 }
 
 export const NavigateAndClearStack = ({ name, params }: NavigateArgs) => {
@@ -30,7 +30,7 @@ export const NavigateAndClearStack = ({ name, params }: NavigateArgs) => {
 };
 
 export const GoBack = () => {
-  if (isReadyRef.current && navigationRef.current
+  if (navigationRef.current
     && navigationRef.current.canGoBack()) {
     navigationRef.current.goBack();
   }

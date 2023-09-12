@@ -5,19 +5,20 @@ export const Styles = StyleSheet.create({
     container: {
         width: '50%',
         height: null,
-        backgroundColor: Colors.Secondary,
+        backgroundColor: Colors.c1,
         borderRadius: 12,
         elevation: 4,
         alignSelf: 'center',
         flexDirection: 'column',
         marginHorizontal: 24,
         marginVertical: 12,
-        paddingBottom: 12
+        //paddingBottom: 12
     },
     image: {
-        resizeMode: 'cover', 
-        borderTopLeftRadius: 12, 
-        borderTopRightRadius: 12
+        resizeMode: 'cover',
+        borderRadius: 12
+        //borderTopLeftRadius: 12, 
+        //borderTopRightRadius: 12
     },
     title: {
         fontSize: 18,

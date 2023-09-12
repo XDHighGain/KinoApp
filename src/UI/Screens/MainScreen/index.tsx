@@ -5,9 +5,11 @@ import { ToolBar } from "../../Components/ToolBar";
 import { ExecuteFetch } from "../../../Network/WebApi";
 import { CinemaCard } from "../../Components/CinemaCard";
 import { GetFilms, GetSerials } from "../../../Network/Requests";
-import { Styles } from "../../Components/ToolBar/styles";
+import { ToolBarHeight } from "../../Components/ToolBar/styles";
 import { ProgressIndicator } from "../../Components/ProgressIndicator";
 import { NavigateToDetailsScreen } from "../../../Navigation/Navigation";
+import { BottomBarHeight } from "../../Components/BottomNavigationBar/styles";
+import { Styles } from "./styles";
 
 export const NavigationNameMainScreen = 'NavigationNameMainScreen';
 
@@ -55,13 +57,13 @@ export const MainScreen = () => {
         }
         fetchFilms().then(
             (res: any[]) => {
-                console.log('123', res)
                 let arr: TFilmModel[] = [];
+                console.log(res)
                 res.forEach(item => {
                     arr.push({
                         alternativeName: item.alternativeName,
                         countries: item.countries,
-                        description: item.shortDescription,
+                        description: item.description,
                         genres: item.genres,
                         id: item.id,
                         movieLength: item.movieLength,
@@ -80,7 +82,6 @@ export const MainScreen = () => {
         )
         fetchSerials().then(
             (res: any[]) => {
-                console.log('123', res)
                 let arr: TFilmModel[] = [];
                 res.forEach(item => {
                     arr.push({
@@ -130,6 +131,7 @@ export const MainScreen = () => {
             <ToolBar canGoBack={true} title='Кино и сериалы' searchIsActive={true}></ToolBar>
             <View style={{ flex: 1, flexDirection: 'column', alignContent: 'flex-start' }}>
                 <ScrollView>
+                    <View style={[Styles.buffer, {height: ToolBarHeight}]}/>
                     <Text style={Styles.listTitle}>Подборка фильмов</Text>
                     <FlatList
                         ListEmptyComponent={ProgressIndicator}
@@ -148,6 +150,7 @@ export const MainScreen = () => {
                         data={serials}
                         renderItem={renderItem2}
                     />
+                    <View style={[Styles.buffer, {height: BottomBarHeight}]}/>
                 </ScrollView>
             </View>
         </View>

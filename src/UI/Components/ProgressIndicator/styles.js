@@ -3,32 +3,19 @@ import { Colors } from "../../../Resources/Colors";
 
 export const Styles = StyleSheet.create({
     container: {
-        width: '50%',
-        height: null,
-        backgroundColor: Colors.Secondary,
-        borderRadius: 12,
-        elevation: 4,
-        alignSelf: 'center',
-        flexDirection: 'column',
-        marginHorizontal: 24,
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        marginHorizontal: 24, 
         marginVertical: 12,
-        paddingBottom: 12
+    },
+    animatedContainer: {
+        width: '40%', 
+        height: '40%',
     },
     image: {
-        resizeMode: 'cover', 
-        borderTopLeftRadius: 12, 
-        borderTopRightRadius: 12
+        width: '100%', 
+        height: '100%', 
+        tintColor: Colors.Secondary,
+        resizeMode: 'contain'
     },
-    title: {
-        fontSize: 18,
-        color: Colors.White,
-        marginHorizontal: 12,
-        fontWeight: '400'
-    },
-    descr: {
-        fontSize: 12,
-        color: Colors.White,
-        marginHorizontal: 12,
-        fontWeight: '400'
-    }
 })

@@ -14,17 +14,24 @@ export const Colors = {
     Content: '#e7dbed',
     White: 'white'*/
 
-    Primary: '#050807',
+   /* Primary: '#050807',
     Secondary: '#342a42',
     Neutral: '#767987',
     Accent: '#c9bdd8',
     Content: '#efe6ef',
-    White: 'white'
+    White: 'white'*/
+    Primary: '#050807',
+    Secondary: '#090909',
+    Neutral: '#558a9e',
+    Accent: '#c9bdd8',
+    Content: '#efdeef',
+    White: '#f9f8f9',
+    c1: '#767987',
 }
 
 /*
-.color1 {color: #050807;}
-.color2 {color: #342a42;}
-.color3 {color: #767987;}
-.color4 {color: #c9bdd8;}
-.color5 {color: #efe6ef;}*/
+.color1 {color: #260c1d;}
+.color2 {color: #582828;}
+.color3 {color: #ccc0d8;}
+.color4 {color: #efdeef;}
+.color5 {color: #f9f8f9;}*/

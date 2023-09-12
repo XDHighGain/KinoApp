@@ -42,19 +42,6 @@ export const BottomNavigationItem: React.FC<INavItemProps> = ({ title, index, on
         };
     });
 
-    const handlePress = () => {
-        if(!isActive)
-            {
-                opacity.value = 1; 
-                height.value = 22
-            }
-        else
-        {
-           //opacity.value = 0; 
-           height.value = 0
-        }
-    }
-
     return (
         <TouchableOpacity onPress={() => onPress(index)} activeOpacity={0.8} style={[Styles.itemContainer, { opacity: isActive === true ? 1 : 0.5 }]}>
             <Image style={Styles.item} source={ImageSource()} ></Image>

@@ -1,28 +1,29 @@
 import {StyleSheet} from "react-native";
 import { Colors } from "../../../Resources/Colors";
+export const ToolBarHeight = 50;
 
 export const Styles = StyleSheet.create({
     barContainer: {
         width :'100%',
         backgroundColor: Colors.Secondary,
-        height: 60,
+        height: ToolBarHeight,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignContent: 'center',
-        elevation: 10
-        //borderBottomRightRadius: 12,
-        //borderBottomLeftRadius: 12
+        elevation: 10,
+        opacity: 0.95,
+        position: 'absolute',
+        top: 0,
+        zIndex: 2
     },
     leftContentContainer: {
         height: '100%',
         width: 50,
         alignItems: 'center',
         justifyContent: 'center'
-        //backgroundColor: 'grey'
     },
     middleContentContainer: {
         flex: 1,
-        //backgroundColor: 'red',
         justifyContent: 'center'
     },
     rightContentContainer: {
@@ -30,7 +31,6 @@ export const Styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center'
-        //backgroundColor: 'blue'
     },
     titleStyle: {
         fontSize: 24,
@@ -48,23 +48,5 @@ export const Styles = StyleSheet.create({
         height: 20,
         resizeMode: 'contain',
         tintColor: Colors.Content, 
-    },
-    listTitle: {
-        fontSize: 24,
-        fontWeight: '400',
-        color: Colors.Primary,
-        margin: 12
-    },
-    titleText: {
-        fontSize: 28,
-        fontWeight: '500',
-        color: Colors.Primary,
-        marginHorizontal: 12
-    },
-    subtitleText: {
-        fontSize: 16,
-        fontWeight: '400',
-        color: Colors.Primary,
-        marginHorizontal: 12
     }
 })

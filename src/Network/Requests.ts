@@ -6,7 +6,7 @@ export const GetFilms = async () => {
     let response = await GET({
         url: EndPointList.movie,
         params: {
-            "limit": '10'
+            "limit": '6'
         }
     });
     return response.data?.docs;
@@ -16,8 +16,8 @@ export const GetSerials = async () => {
     let response = await GET({
         url: EndPointList.movie,
         params: {
-            "limit": '10',
-            "type": 'anime'
+            "limit": '6',
+            "type": 'tv-series'
         }
     })
     return response.data?.docs;

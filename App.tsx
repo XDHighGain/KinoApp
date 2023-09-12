@@ -11,7 +11,7 @@ import { FavotitesScreen, NavigationNameFavoritesScreen } from './src/UI/Screens
 import { BookmarksScreen, NavigationNameBookmarksScreen } from './src/UI/Screens/BookmarksScreen';
 import { NavigationNameUserScreen, UserScreen } from './src/UI/Screens/UserScreen';
 import { DetailsScreen, NavigationNameDetailsScreen } from './src/UI/Screens/DetailsScreen';
-import { NavigateToDetailsScreen } from './src/Navigation/Navigation';
+
 
 const Stack = createNativeStackNavigator();
 
