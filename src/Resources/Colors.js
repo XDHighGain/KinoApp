@@ -27,6 +27,7 @@ export const Colors = {
     Content: '#efdeef',
     White: '#f9f8f9',
     c1: '#767987',
+    Red: '#db3535'
 }
 
 /*

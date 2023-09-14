@@ -12,35 +12,19 @@ export const Styles = StyleSheet.create({
         alignContent: 'center',
         elevation: 10,
         opacity: 0.95,
-        //borderBottomRightRadius: 12,
-        //borderBottomLeftRadius: 12,
         position: 'absolute',
         top: 0,
         zIndex: 2
     },
-    leftContentContainer: {
-        height: '100%',
-        width: 50,
+    titleContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
         alignItems: 'center',
-        justifyContent: 'center'
-        //backgroundColor: 'grey'
-    },
-    middleContentContainer: {
-        flex: 1,
-        //backgroundColor: 'red',
-        justifyContent: 'center'
-    },
-    rightContentContainer: {
-        width: 50,
-        height: '100%',
-        alignItems: 'center',
-        justifyContent: 'center'
-        //backgroundColor: 'blue'
+        marginHorizontal: 24,
     },
     titleStyle: {
         fontSize: 24,
-        color: Colors.Content,
-        
+        color: Colors.Content,    
     },
     searchIcon: {
         width: 24,
@@ -64,25 +48,27 @@ export const Styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: '500',
         color: Colors.Primary,
-        marginHorizontal: 12,
+        //marginHorizontal: 12,
         alignSelf: 'center'
     },
     subtitleText: {
         fontSize: 16,
         fontWeight: '400',
-        color: Colors.Primary,
-        marginHorizontal: 12,
+        color: Colors.Neutral,
+        //marginHorizontal: 12,
         alignSelf: 'center'
     },
     description: {
-        marginHorizontal: 12,   
+        marginHorizontal: 12,  
+        textAlign: 'justify' 
     },
     ratingsContainer: {
         width: '100%',
         marginHorizontal: 12,
         marginVertical: 12,
         flexDirection: 'row',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
     },
     ratingItem: {
         flexDirection: 'column',
@@ -90,10 +76,30 @@ export const Styles = StyleSheet.create({
     },
     ratingTitle: {
         fontSize: 16,
-        fontWeight: '600'
+        fontWeight: '500',
+        color: Colors.Primary
     },
     ratingValue: {
         fontSize: 14,
-        fontWeight: '400'
+        fontWeight: '300'
+    },
+    buttonsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginVertical: 12,
+        marginHorizontal: 24
+    },
+    actorsContainer: {
+        width: '100%',
+        height: 200,
+        //backgroundColor: 'grey',
+        marginVertical: 12
+    },
+    sectionTitle: {
+        fontSize: 16,
+        fontWeight: '500',
+        color: Colors.Primary,
+        marginHorizontal: 12
     }
 })

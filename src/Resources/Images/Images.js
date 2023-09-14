@@ -4,6 +4,7 @@ export const Images = {
         bookmarks: require('./Icons/icon_bookmark.png'),
         close: require('./Icons/icon_close.png'),
         favorite: require('./Icons/icon_favorite.png'),
+        favorite_true: require('./Icons/icon_favorite_true.png'),
         filterLines: require('./Icons/icon_filter_lines.png'),
         home: require('./Icons/icon_home.png'),
         menu: require('./Icons/icon_menu.png'),
@@ -18,7 +19,7 @@ export const Images = {
         spinner: require('./Icons/icon_spinner.png')
     },
     Drawable: {
-
+        gradient: require('./Drawable/drawable_gradient.png'),
     },
     Images: {
 

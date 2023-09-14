@@ -8,5 +8,6 @@ export const Strings = {
     cinemas: 'Кино',
     serials: 'Сериалы',
     rewiew: 'Отзывы',
-    actors: 'Актеры'
+    actors: 'Актеры',
+    watchTrailer: 'Смотреть трейлер'
 }

@@ -14,34 +14,36 @@ import { DetailsScreen, NavigationNameDetailsScreen } from './src/UI/Screens/Det
 
 
 const Stack = createNativeStackNavigator();
-
+const Tab = createNativeStackNavigator();
 function App() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Content }} >
       <NavigationContainer
         ref={navigationRef}>
         <Stack.Navigator
-        screenOptions={{animation:'fade'}}>
-          <Stack.Screen
-            options={{headerShown: false}}
-            component={MainScreen}
-            name={NavigationNameMainScreen} />
+          screenOptions={{ animation: 'fade' }}>
+          <Stack.Group>
             <Stack.Screen
-            options={{headerShown: false}}
+              options={{ headerShown: false }}
+              component={MainScreen}
+              name={NavigationNameMainScreen} />
+            <Stack.Screen
+              options={{ headerShown: false }}
+              component={DetailsScreen}
+              name={NavigationNameDetailsScreen} />
+          </Stack.Group>
+          <Stack.Screen
+            options={{ headerShown: false }}
             component={FavotitesScreen}
             name={NavigationNameFavoritesScreen} />
-            <Stack.Screen
-            options={{headerShown: false}}
+          <Stack.Screen
+            options={{ headerShown: false }}
             component={BookmarksScreen}
             name={NavigationNameBookmarksScreen} />
-            <Stack.Screen
-            options={{headerShown: false}}
+          <Stack.Screen
+            options={{ headerShown: false }}
             component={UserScreen}
             name={NavigationNameUserScreen} />
-            <Stack.Screen
-            options={{headerShown: false}}
-            component={DetailsScreen}
-            name={NavigationNameDetailsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
       <BottomNavigationBar></BottomNavigationBar>

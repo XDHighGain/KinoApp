@@ -6,7 +6,7 @@ import { NavigateBack } from "../../../Navigation/Navigation";
 
 interface IToolbar {
     canGoBack: boolean,
-    title: string,
+    title?: string,
     searchIsActive: boolean
 }
 

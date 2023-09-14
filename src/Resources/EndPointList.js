@@ -7,4 +7,5 @@ export const EndPointList = {
     health: '/v1/health',
     random: '/v1.3/movie/random', 
     movie: '/v1.3/movie', 
+    person: '/v1/person', 
 }

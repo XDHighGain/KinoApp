@@ -4,7 +4,7 @@ import { Colors } from "../../../Resources/Colors";
 import { ToolBar } from "../../Components/ToolBar";
 import { ExecuteFetch } from "../../../Network/WebApi";
 import { CinemaCard } from "../../Components/CinemaCard";
-import { GetFilms, GetSerials } from "../../../Network/Requests";
+import { GetAnime, GetFilms, GetSerials } from "../../../Network/Requests";
 import { ToolBarHeight } from "../../Components/ToolBar/styles";
 import { ProgressIndicator } from "../../Components/ProgressIndicator";
 import { NavigateToDetailsScreen } from "../../../Navigation/Navigation";
@@ -47,6 +47,7 @@ export const MainScreen = () => {
 
     const [films, setFilms] = React.useState<TFilmModel[] | null>(null)
     const [serials, setSerials] = React.useState<TFilmModel[] | null>(null)
+    const [anime, setAnime] = React.useState<TFilmModel[] | null>(null)
 
     React.useEffect(() => {
         const fetchFilms = async () => {
@@ -54,6 +55,9 @@ export const MainScreen = () => {
         }
         const fetchSerials = async () => {
             return await GetSerials()
+        }
+        const fetchAnime = async () => {
+            return await GetAnime()
         }
         fetchFilms().then(
             (res: any[]) => {
@@ -104,6 +108,30 @@ export const MainScreen = () => {
                 setSerials(arr)
             }
         )
+        fetchAnime().then(
+            (res: any[]) => {
+                let arr: TFilmModel[] = [];
+                res.forEach(item => {
+                    arr.push({
+                        alternativeName: item.alternativeName,
+                        countries: item.countries,
+                        description: item.description,
+                        genres: item.genres,
+                        id: item.id,
+                        movieLength: item.movieLength,
+                        name: item.name,
+                        poster: item.poster.url,
+                        rating: {
+                            imdb: item.rating.imdb,
+                            kp: item.rating.kp,
+                        },
+                        type: item.type,
+                        year: item.year
+                    })
+                })
+                setAnime(arr)
+            }
+        )
     }, [])
 
     const renderItem = React.useCallback((itemModel: any) => {
@@ -125,6 +153,16 @@ export const MainScreen = () => {
             filmModel={itemModel.item}/>
         )
     }, [serials])
+
+    const renderItem3 = React.useCallback((itemModel: any) => {
+        return (
+            <CinemaCard
+            onPress={() => NavigateToDetailsScreen({
+                params: itemModel.item
+            })}
+            filmModel={itemModel.item}/>
+        )
+    }, [anime])
 
     return (
         <View style={{ backgroundColor: Colors.Content, flex: 1 }}>
@@ -149,6 +187,15 @@ export const MainScreen = () => {
                         contentContainerStyle={{ height: null }}
                         data={serials}
                         renderItem={renderItem2}
+                    />
+                    <Text style={Styles.listTitle}>Подборка аниме</Text>
+                    <FlatList
+                        ListEmptyComponent={ProgressIndicator}
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        contentContainerStyle={{ height: null }}
+                        data={anime}
+                        renderItem={renderItem3}
                     />
                     <View style={[Styles.buffer, {height: BottomBarHeight}]}/>
                 </ScrollView>
